@@ -1,0 +1,2886 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="0.99.6839.38235"?>
+<regions xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings dpi="96">
+    <identity>
+      <id>e770b762-7d7f-4201-86f0-0f8c1022fc84</id>
+      <revision>260</revision>
+    </identity>
+    <metadata lang="tha">
+      <title>SMath Calculation Sheet Template</title>
+    </metadata>
+    <calculation>
+      <precision>2</precision>
+      <exponentialThreshold>4</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="true" viewMode="0" printGrid="False" printAreas="False" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="29" right="29" top="29" bottom="29" />
+      <header alignment="Center" color="#a9a9a9">SYN-EN-FRM-800 Rev 0, Calculation Sheet Template (SMath), Dated 30-May-18</header>
+      <footer alignment="Center" color="#a9a9a9">Page &amp;[PAGENUM] of &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="0.99.6839.38235" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="Math Region" version="0.99.6839.38235" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.10.6839.38235" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="SpecialFunctions" version="1.12.6839.38235" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.11.6839.38235" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="XLSX Import/Export" version="1.1.6824.33002" guid="621b8a62-bd79-47fc-948b-d4c4ab3b8588" />
+    </dependencies>
+  </settings>
+  <region id="0" left="18" top="0" width="729" height="21" color="#000000" bgColor="#ffffff">
+    <picture>
+      <raw format="png" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAtEAAAANCAYAAABvqjJ6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVHhe7dihDQAwEMSw33/pLykoKQi3pexwulkAACAxogEAIDKiAQAgMqIBACAyogEAIDKiAQAgMqIBACD6juiZkSRJknR7eaIBACAyogEAIDKiAQAgMqIBACAyogEAINk9WFiZ7ESweYkAAAAASUVORK5CYII=</raw>
+    </picture>
+  </region>
+  <region id="1" left="792" top="0" width="729" height="21" color="#000000" bgColor="#ffffff">
+    <picture>
+      <raw format="png" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAtEAAAANCAYAAABvqjJ6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVHhe7dihDQAwEMSw33/pLykoKQi3pexwulkAACAxogEAIDKiAQAgMqIBACAyogEAIDKiAQAgMqIBACD6juiZkSRJknR7eaIBACAyogEAIDKiAQAgMqIBACAyogEAINk9WFiZ7ESweYkAAAAASUVORK5CYII=</raw>
+    </picture>
+  </region>
+  <region id="2" left="288" top="18" width="152" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p bold="true">CALCULATION SHEET</p>
+    </text>
+  </region>
+  <region id="3" left="1062" top="18" width="152" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p bold="true">CALCULATION SHEET</p>
+    </text>
+  </region>
+  <region id="4" left="18" top="36" width="729" height="21" color="#000000" bgColor="#ffffff">
+    <picture>
+      <raw format="png" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAtEAAAANCAYAAABvqjJ6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVHhe7dihDQAwEMSw33/pLykoKQi3pexwulkAACAxogEAIDKiAQAgMqIBACAyogEAIDKiAQAgMqIBACD6juiZkSRJknR7eaIBACAyogEAIDKiAQAgMqIBACAyogEAINk9WFiZ7ESweYkAAAAASUVORK5CYII=</raw>
+    </picture>
+  </region>
+  <region id="5" left="792" top="36" width="729" height="21" color="#000000" bgColor="#ffffff">
+    <picture>
+      <raw format="png" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAtEAAAANCAYAAABvqjJ6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVHhe7dihDQAwEMSw33/pLykoKQi3pexwulkAACAxogEAIDKiAQAgMqIBACAyogEAIDKiAQAgMqIBACD6juiZkSRJknR7eaIBACAyogEAIDKiAQAgMqIBACAyogEAINk9WFiZ7ESweYkAAAAASUVORK5CYII=</raw>
+    </picture>
+  </region>
+  <region id="6" left="27" top="63" width="92" height="87" color="#000000" bgColor="#ffffff">
+    <picture>
+      <raw format="png" encoding="base64">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</raw>
+    </picture>
+  </region>
+  <region id="7" left="126" top="63" width="398" height="72" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>TITLE: DNVGL-RP-F114 Calculation verification    DOC NO.: SYN-EN-FRM-800 PROJECT TITLE: SYNTERRA TEMPLATEPROJECT NO.: SYN</p>
+    </text>
+  </region>
+  <region id="8" left="567" top="63" width="167" height="88" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>DATE:         29-Oct-18REV:           0AUTHOR:     PA   CHECKER:   NE     APPROVER: PR   </p>
+    </text>
+  </region>
+  <region id="9" left="801" top="63" width="356" height="72" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>TITLE: SMATH CALCULATION SHEET TEMPLATE      DOC NO.: SYN-EN-FRM-800 PROJECT TITLE: SYNTERRA TEMPLATEPROJECT NO.: SYN</p>
+    </text>
+  </region>
+  <region id="10" left="1341" top="63" width="179" height="88" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>DATE:         30-MAY-18   REV:           1AUTHOR:     KT   CHECKER:   PR     APPROVER: PA   </p>
+    </text>
+  </region>
+  <region id="11" left="18" top="153" width="729" height="21" color="#000000" bgColor="#ffffff">
+    <picture>
+      <raw format="png" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAtEAAAANCAYAAABvqjJ6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVHhe7dihDQAwEMSw33/pLykoKQi3pexwulkAACAxogEAIDKiAQAgMqIBACAyogEAIDKiAQAgMqIBACD6juiZkSRJknR7eaIBACAyogEAIDKiAQAgMqIBACAyogEAINk9WFiZ7ESweYkAAAAASUVORK5CYII=</raw>
+    </picture>
+  </region>
+  <region id="12" left="792" top="153" width="729" height="21" color="#000000" bgColor="#ffffff">
+    <picture>
+      <raw format="png" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAtEAAAANCAYAAABvqjJ6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVHhe7dihDQAwEMSw33/pLykoKQi3pexwulkAACAxogEAIDKiAQAgMqIBACAyogEAIDKiAQAgMqIBACD6juiZkSRJknR7eaIBACAyogEAIDKiAQAgMqIBACAyogEAINk9WFiZ7ESweYkAAAAASUVORK5CYII=</raw>
+    </picture>
+  </region>
+  <region id="13" left="792" top="189" width="692" height="56" color="#ff0000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>NOTE In case using "no company's logo template", please use the above title box instead.</p>
+    </text>
+  </region>
+  <region id="14" left="18" top="207" width="111" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p bold="true">INTRODUCTION</p>
+    </text>
+  </region>
+  <region id="15" left="18" top="234" width="670" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>This calculation sheet was developed for DNVGL-RP-F114 pipeline soil interactioncalculation benchmark for non-burial condition</p>
+    </text>
+  </region>
+  <region id="16" left="18" top="297" width="103" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p bold="true">ASSUMPTIONS</p>
+    </text>
+  </region>
+  <region id="17" left="18" top="324" width="333" height="72" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>The analysis assumptions are as follow:- Assumption1- Assumption2</p>
+    </text>
+  </region>
+  <region id="18" left="18" top="432" width="94" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p bold="true">REFERENCES</p>
+    </text>
+  </region>
+  <region id="19" left="18" top="459" width="541" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>[1]  DNVGL RP F114, Pipe-soil interaction for submarine pipelines</p>
+    </text>
+  </region>
+  <region id="20" left="18" top="576" width="86" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p bold="true">CONSTANTS</p>
+    </text>
+  </region>
+  <region id="21" left="351" top="621" width="108" height="50" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">ρ.sw</e>
+        <e type="operand">1025</e>
+        <e type="operand" style="unit">kg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="22" left="18" top="630" width="119" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Water density</p>
+    </text>
+  </region>
+  <region id="23" left="351" top="684" width="108" height="50" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">ρ.st</e>
+        <e type="operand">7850</e>
+        <e type="operand" style="unit">kg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="24" left="18" top="693" width="119" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Steel density</p>
+    </text>
+  </region>
+  <region id="25" left="351" top="747" width="113" height="50" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">ρ.cont</e>
+        <e type="operand">200</e>
+        <e type="operand" style="unit">kg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="26" left="18" top="756" width="136" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Content density</p>
+    </text>
+  </region>
+  <region id="27" left="18" top="810" width="257" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Modulus of elasticity of steel</p>
+    </text>
+  </region>
+  <region id="28" left="351" top="810" width="102" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">E.st</e>
+        <e type="operand">207</e>
+        <e type="operand" style="unit">GPa</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="29" left="18" top="864" width="135" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Adhesion factor</p>
+    </text>
+  </region>
+  <region id="30" left="351" top="864" width="62" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">α</e>
+        <e type="operand">1.0</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="31" left="18" top="918" width="151" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>preloading factor</p>
+    </text>
+  </region>
+  <region id="32" left="351" top="918" width="70" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">m</e>
+        <e type="operand">0.70</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="33" left="18" top="972" width="102" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Rate factor</p>
+    </text>
+  </region>
+  <region id="34" left="351" top="972" width="71" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">γ.rate</e>
+        <e type="operand">1</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="35" left="18" top="1125" width="53" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p bold="true">INPUT</p>
+    </text>
+  </region>
+  <region id="36" left="18" top="1170" width="127" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Linepipe input</p>
+    </text>
+  </region>
+  <region id="37" left="288" top="1224" width="212" height="167" color="#000000" bgColor="#ffffff">
+    <picture>
+      <raw format="png" encoding="base64">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</raw>
+    </picture>
+  </region>
+  <region id="38" left="270" top="1404" width="266" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Nomenclature of Input Parameter</p>
+    </text>
+  </region>
+  <region id="39" left="18" top="1458" width="168" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Pipe outer diameter</p>
+    </text>
+  </region>
+  <region id="40" left="315" top="1458" width="98" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">D</e>
+        <e type="operand">10.75</e>
+        <e type="operand" style="unit">in</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="41" left="630" top="1458" width="104" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">D</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">mm</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">273.05</e>
+      </result>
+    </math>
+  </region>
+  <region id="42" left="18" top="1512" width="168" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Pipe wall thickness</p>
+    </text>
+  </region>
+  <region id="43" left="315" top="1512" width="96" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">t.w</e>
+        <e type="operand">0.50</e>
+        <e type="operand" style="unit">in</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="44" left="630" top="1512" width="94" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">t.w</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">mm</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">12.7</e>
+      </result>
+    </math>
+  </region>
+  <region id="45" left="18" top="1566" width="177" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Installation tension</p>
+    </text>
+  </region>
+  <region id="46" left="315" top="1566" width="88" height="30" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">T.0</e>
+        <e type="operand">250</e>
+        <e type="operand" style="unit">kN</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="47" left="18" top="2232" width="160" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Geotechnical input</p>
+    </text>
+  </region>
+  <region id="48" left="288" top="2295" width="129" height="50" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operand">5000</e>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="49" left="585" top="2295" width="147" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">γ'</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">5000</e>
+        <e type="operand" style="unit">Pa</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="50" left="18" top="2304" width="184" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Submerged unit weight</p>
+    </text>
+  </region>
+  <region id="51" left="288" top="2349" width="213" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su</e>
+        <e type="operand">1000</e>
+        <e type="operand" style="unit">Pa</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">1000</e>
+        <e type="operand" style="unit">Pa</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="52" left="18" top="2358" width="201" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Undrained shear stregth</p>
+    </text>
+  </region>
+  <region id="53" left="585" top="2358" width="143" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">Su</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">2000</e>
+        <e type="operand" style="unit">Pa</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="54" left="288" top="2403" width="221" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su_re</e>
+        <e type="operand">400</e>
+        <e type="operand" style="unit">Pa</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">400</e>
+        <e type="operand" style="unit">Pa</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="55" left="18" top="2412" width="201" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Remoulded sher strength</p>
+    </text>
+  </region>
+  <region id="56" left="585" top="2412" width="159" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">Su_re</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">800</e>
+        <e type="operand" style="unit">Pa</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="57" left="288" top="2457" width="181" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">φ</e>
+        <e type="operand">30</e>
+        <e type="operand" style="unit">deg</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">deg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="58" left="18" top="2466" width="177" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Friction coefficient</p>
+    </text>
+  </region>
+  <region id="59" left="585" top="2466" width="115" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">φ</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.54</e>
+      </result>
+    </math>
+  </region>
+  <region id="60" left="288" top="2511" width="207" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">δ.peak</e>
+        <e type="operand">25</e>
+        <e type="operand" style="unit">deg</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">deg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="61" left="585" top="2511" width="141" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">δ.peak</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.45</e>
+      </result>
+    </math>
+  </region>
+  <region id="62" left="18" top="2520" width="176" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Peak interface angle</p>
+    </text>
+  </region>
+  <region id="63" left="288" top="2565" width="200" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">δ.res</e>
+        <e type="operand">20</e>
+        <e type="operand" style="unit">deg</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">deg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="64" left="18" top="2574" width="209" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Residual interface angle</p>
+    </text>
+  </region>
+  <region id="65" left="585" top="2574" width="150" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">δ.res</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.3665</e>
+      </result>
+    </math>
+  </region>
+  <region id="66" left="18" top="3348" width="210" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p bold="true">INTERMEDIATE CALCULATION</p>
+    </text>
+  </region>
+  <region id="67" left="18" top="3384" width="152" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Internal diameter</p>
+    </text>
+  </region>
+  <region id="68" left="315" top="3384" width="100" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="3">
+      <input>
+        <e type="operand">D.i</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operand">t.w</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="69" left="576" top="3384" width="98" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="3">
+      <input>
+        <e type="operand">D.i</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.25</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="70" left="315" top="3429" width="93" height="39" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math optimize="2" decimalPlaces="4" exponentialThreshold="3">
+      <input>
+        <e type="operand">A.out</e>
+        <e type="operand">π</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="71" left="576" top="3429" width="121" height="39" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="3">
+      <input>
+        <e type="operand">A.out</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.23</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="72" left="18" top="3438" width="152" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Pipe overall area</p>
+    </text>
+  </region>
+  <region id="73" left="315" top="3483" width="92" height="39" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math optimize="2" decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">A.in</e>
+        <e type="operand">π</e>
+        <e type="operand">D.i</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="74" left="576" top="3483" width="114" height="39" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="3">
+      <input>
+        <e type="operand">A.in</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.19</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="75" left="18" top="3492" width="111" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Content area</p>
+    </text>
+  </region>
+  <region id="76" left="18" top="3546" width="94" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Steel area</p>
+    </text>
+  </region>
+  <region id="77" left="315" top="3546" width="115" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="3">
+      <input>
+        <e type="operand">A.st</e>
+        <e type="operand">A.out</e>
+        <e type="operand">A.in</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="78" left="576" top="3546" width="114" height="39" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="5">
+      <input>
+        <e type="operand">A.st</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.04</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="79" left="18" top="3600" width="94" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Steel mass</p>
+    </text>
+  </region>
+  <region id="80" left="315" top="3600" width="102" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">m.st</e>
+        <e type="operand">ρ.st</e>
+        <e type="operand">A.st</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="81" left="576" top="3600" width="132" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">m.st</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">326.17</e>
+        <e type="operand" style="unit">kg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="82" left="18" top="3654" width="119" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Buoyancy mass</p>
+    </text>
+  </region>
+  <region id="83" left="315" top="3654" width="103" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">m.b</e>
+        <e type="operand">ρ.sw</e>
+        <e type="operand">A.out</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="84" left="576" top="3654" width="126" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">m.b</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">240.08</e>
+        <e type="operand" style="unit">kg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="85" left="18" top="3708" width="111" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Content mass</p>
+    </text>
+  </region>
+  <region id="86" left="315" top="3708" width="128" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">m.cont</e>
+        <e type="operand">ρ.cont</e>
+        <e type="operand">A.in</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="87" left="576" top="3708" width="137" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">m.cont</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">38.54</e>
+        <e type="operand" style="unit">kg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="88" left="18" top="3762" width="119" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Seawater mass</p>
+    </text>
+  </region>
+  <region id="89" left="315" top="3762" width="102" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">m.sw</e>
+        <e type="operand">ρ.sw</e>
+        <e type="operand">A.in</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="90" left="576" top="3762" width="132" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">m.sw</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">197.49</e>
+        <e type="operand" style="unit">kg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="91" left="18" top="3816" width="250" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Installation submerged weight</p>
+    </text>
+  </region>
+  <region id="92" left="315" top="3816" width="139" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">W.ins</e>
+        <e type="operand">m.st</e>
+        <e type="operand">m.b</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand" style="unit">g.e</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="93" left="576" top="3816" width="119" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="5">
+      <input>
+        <e type="operand">W.ins</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">844.22</e>
+      </result>
+    </math>
+  </region>
+  <region id="94" left="18" top="3870" width="225" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Hydrotest submerged weight</p>
+    </text>
+  </region>
+  <region id="95" left="315" top="3870" width="177" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">W.hdt</e>
+        <e type="operand">m.st</e>
+        <e type="operand">m.sw</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">m.b</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand" style="unit">g.e</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="96" left="576" top="3870" width="127" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="5">
+      <input>
+        <e type="operand">W.hdt</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">2780.96</e>
+      </result>
+    </math>
+  </region>
+  <region id="97" left="315" top="3915" width="190" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">W.opt</e>
+        <e type="operand">m.st</e>
+        <e type="operand">m.cont</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">m.b</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand" style="unit">g.e</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="98" left="576" top="3915" width="127" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="5">
+      <input>
+        <e type="operand">W.opt</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">1222.12</e>
+      </result>
+    </math>
+  </region>
+  <region id="99" left="18" top="3924" width="225" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Operation submerged weight</p>
+    </text>
+  </region>
+  <region id="100" left="315" top="3969" width="150" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">I.st</e>
+        <e type="operand">π</e>
+        <e type="operand">64</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">D</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">D.i</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="101" left="576" top="3969" width="168" height="39" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">I.st</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">8.822</e>
+        <e type="operand">10</e>
+        <e type="operand">5</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="102" left="18" top="3978" width="151" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Moment of inertia</p>
+    </text>
+  </region>
+  <region id="103" left="18" top="4464" width="103" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p bold="true">CALCULATION</p>
+    </text>
+  </region>
+  <region id="104" left="306" top="4500" width="171" height="100" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">B</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">2</e>
+        <e type="operand">D</e>
+        <e type="operand">z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">-</e>
+        <e type="function" args="1">sqrt</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D</e>
+        <e type="function" args="3">if</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="105" left="18" top="4509" width="201" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Pipe soil contact widthEq 4.3 of [1]</p>
+    </text>
+  </region>
+  <region id="106" left="315" top="4599" width="414" height="144" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">A.bm</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">B</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">asin</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">B</e>
+        <e type="operand">D</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">B</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">asin</e>
+        <e type="function" args="1">cos</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">π</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand">8</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="function" args="3">if</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="107" left="1071" top="4599" width="230" height="110" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">z.su0</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">1</e>
+        <e type="operand">2</e>
+        <e type="function" args="1">sqrt</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">0</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">2</e>
+        <e type="function" args="1">sqrt</e>
+        <e type="operand">1</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">B</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">-</e>
+        <e type="function" args="3">if</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="108" left="18" top="4608" width="258" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Penetration cross-area of pipeEq 4.7 of [1]</p>
+    </text>
+  </region>
+  <region id="109" left="783" top="4608" width="258" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Penetration cross-area of pipeEq 4.4 of [1]</p>
+    </text>
+  </region>
+  <region id="110" left="1368" top="4608" width="110" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">0</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">z.su0</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0</e>
+      </result>
+    </math>
+  </region>
+  <region id="111" left="18" top="4770" width="291" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Penetration resistance for Model 1Eq 4.8 of [1]</p>
+    </text>
+  </region>
+  <region id="112" left="18" top="4833" width="389" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="tha">
+      <p>Penetration resistance for Model2 (4.8) of [1]</p>
+    </text>
+  </region>
+  <region id="113" left="36" top="4869" width="513" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">Q.v_ins</e>
+        <e type="operand">6</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.25</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.4</e>
+        <e type="operand">10</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.5</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2</e>
+        <e type="operand">1</e>
+        <e type="function" args="4">mat</e>
+        <e type="function" args="1">min</e>
+        <e type="operand">1.5</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">A.bm</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su_re</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su_re</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="114" left="576" top="4914" width="203" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">Q.v_ins</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">3800.98</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand" style="unit">Pa</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="115" left="36" top="4995" width="463" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">Q.v</e>
+        <e type="operand">6</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.25</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">3.4</e>
+        <e type="operand">10</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.5</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2</e>
+        <e type="operand">1</e>
+        <e type="function" args="4">mat</e>
+        <e type="function" args="1">min</e>
+        <e type="operand">1.5</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">A.bm</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="116" left="585" top="5040" width="177" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">Q.v</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">6520.64</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand" style="unit">Pa</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="117" left="18" top="5562" width="168" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p bold="true">Undrained embedment</p>
+    </text>
+  </region>
+  <region id="118" left="18" top="5589" width="234" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Allowable solving tolerance</p>
+    </text>
+  </region>
+  <region id="119" left="333" top="5589" width="82" height="24" color="#000000" bgColor="#ffff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Δz</e>
+        <e type="operand">0.1</e>
+        <e type="operand" style="unit">%</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="120" left="18" top="5625" width="444" height="422" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <description active="true" position="Top" lang="tha">
+        <p>Solving Penetration - Installation Case</p>
+      </description>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">k.lay1</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Q.v_ins</e>
+        <e type="operand">W.ins</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">k.lay2</e>
+        <e type="operand">0.6</e>
+        <e type="operand">0.4</e>
+        <e type="operand">E.st</e>
+        <e type="operand">I.st</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">k.lay1</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">W.ins</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operand">T.0</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.25</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">1</e>
+        <e type="operand">1</e>
+        <e type="operand">2</e>
+        <e type="function" args="4">mat</e>
+        <e type="function" args="1">max</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">f</e>
+        <e type="operand">z</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">k.lay1</e>
+        <e type="operand">z</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">k.lay2</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z.0</e>
+        <e type="operand">0.0001</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z.0</e>
+        <e type="function" args="1">f</e>
+        <e type="operand">0</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">z.0</e>
+        <e type="operand">z.0</e>
+        <e type="operand">Δz</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">1</e>
+        <e type="operand">1</e>
+        <e type="function" args="3">line</e>
+        <e type="function" args="2">while</e>
+        <e type="operand">z.0</e>
+        <e type="function" args="1">f</e>
+        <e type="function" args="1">abs</e>
+        <e type="operand">z.0</e>
+        <e type="operand">Δz</e>
+        <e type="operator" args="2">-</e>
+        <e type="function" args="1">f</e>
+        <e type="function" args="1">abs</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">z.ins.cal</e>
+        <e type="operand">z.0</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z.ins.cal</e>
+        <e type="operand">z.0</e>
+        <e type="operand">Δz</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+        <e type="function" args="3">if</e>
+        <e type="operand">Error.inst</e>
+        <e type="operand">z.ins.cal</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">f</e>
+        <e type="function" args="1">abs</e>
+        <e type="operand">z.ins.cal</e>
+        <e type="function" args="1">k.lay1</e>
+        <e type="operand">W.ins</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">7</e>
+        <e type="operand">1</e>
+        <e type="function" args="9">line</e>
+      </input>
+    </math>
+  </region>
+  <region id="121" left="567" top="6048" width="183" height="39" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Error.inst</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">%</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">2.26</e>
+        <e type="operand">10</e>
+        <e type="operand">4</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="122" left="18" top="6102" width="190" height="334" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <description active="true" position="Top" lang="tha">
+        <p>Solving Penetration - Hydrotest Case</p>
+      </description>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">f</e>
+        <e type="operand">z</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">Q.v</e>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">W.hdt</e>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z.0</e>
+        <e type="operand">0.0001</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z.0</e>
+        <e type="function" args="1">f</e>
+        <e type="operand">0</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">z.0</e>
+        <e type="operand">z.0</e>
+        <e type="operand">Δz</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">1</e>
+        <e type="operand">1</e>
+        <e type="function" args="3">line</e>
+        <e type="function" args="2">while</e>
+        <e type="operand">z.0</e>
+        <e type="function" args="1">f</e>
+        <e type="function" args="1">abs</e>
+        <e type="operand">z.0</e>
+        <e type="operand">Δz</e>
+        <e type="operator" args="2">-</e>
+        <e type="function" args="1">f</e>
+        <e type="function" args="1">abs</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">z.hdt.cal</e>
+        <e type="operand">z.0</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z.hdt.cal</e>
+        <e type="operand">z.0</e>
+        <e type="operand">Δz</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+        <e type="function" args="3">if</e>
+        <e type="operand">Error.hdt</e>
+        <e type="operand">z.hdt.cal</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">f</e>
+        <e type="function" args="1">abs</e>
+        <e type="operand">W.hdt</e>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">5</e>
+        <e type="operand">1</e>
+        <e type="function" args="7">line</e>
+      </input>
+    </math>
+  </region>
+  <region id="123" left="396" top="6102" width="190" height="334" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <description active="true" position="Top" lang="tha">
+        <p>Solving Penetration - Operating Case</p>
+      </description>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">f</e>
+        <e type="operand">z</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">Q.v</e>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">W.opt</e>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z.0</e>
+        <e type="operand">0.0001</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z.0</e>
+        <e type="function" args="1">f</e>
+        <e type="operand">0</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">z.0</e>
+        <e type="operand">z.0</e>
+        <e type="operand">Δz</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">1</e>
+        <e type="operand">1</e>
+        <e type="function" args="3">line</e>
+        <e type="function" args="2">while</e>
+        <e type="operand">z.0</e>
+        <e type="function" args="1">f</e>
+        <e type="function" args="1">abs</e>
+        <e type="operand">z.0</e>
+        <e type="operand">Δz</e>
+        <e type="operator" args="2">-</e>
+        <e type="function" args="1">f</e>
+        <e type="function" args="1">abs</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">z.opt.cal</e>
+        <e type="operand">z.0</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">z.opt.cal</e>
+        <e type="operand">z.0</e>
+        <e type="operand">Δz</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+        <e type="function" args="3">if</e>
+        <e type="operand">Error.opt</e>
+        <e type="operand">z.opt.cal</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">f</e>
+        <e type="function" args="1">abs</e>
+        <e type="operand">W.opt</e>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">5</e>
+        <e type="operand">1</e>
+        <e type="function" args="7">line</e>
+      </input>
+    </math>
+  </region>
+  <region id="124" left="225" top="6435" width="131" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Error.hdt</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">%</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">0.05</e>
+      </result>
+    </math>
+  </region>
+  <region id="125" left="612" top="6435" width="131" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Error.opt</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">%</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">0.02</e>
+      </result>
+    </math>
+  </region>
+  <region id="126" left="279" top="6471" width="94" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Calculated</p>
+    </text>
+  </region>
+  <region id="127" left="450" top="6471" width="44" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Used</e>
+      </input>
+    </math>
+  </region>
+  <region id="128" left="18" top="6516" width="193" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Installation embedment</p>
+    </text>
+  </region>
+  <region id="129" left="270" top="6516" width="140" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.ins.cal</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">mm</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">150.1</e>
+      </result>
+    </math>
+  </region>
+  <region id="130" left="432" top="6516" width="111" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.ins</e>
+        <e type="operand">z.ins.cal</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="131" left="639" top="6525" width="115" height="30" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.ins</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">mm</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">150.1</e>
+      </result>
+    </math>
+  </region>
+  <region id="132" left="18" top="6570" width="168" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Hydrotest embedment</p>
+    </text>
+  </region>
+  <region id="133" left="270" top="6570" width="140" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.hdt.cal</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">mm</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">308.1</e>
+      </result>
+    </math>
+  </region>
+  <region id="134" left="432" top="6570" width="200" height="35" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.hdt</e>
+        <e type="operand">z.hdt.cal</e>
+        <e type="operand">z.ins</e>
+        <e type="operand">1</e>
+        <e type="operand">2</e>
+        <e type="function" args="4">mat</e>
+        <e type="function" args="1">max</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="135" left="639" top="6579" width="115" height="30" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.hdt</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">mm</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">308.1</e>
+      </result>
+    </math>
+  </region>
+  <region id="136" left="18" top="6624" width="86" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Operation</p>
+    </text>
+  </region>
+  <region id="137" left="270" top="6624" width="132" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.opt.cal</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">mm</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">55.1</e>
+      </result>
+    </math>
+  </region>
+  <region id="138" left="432" top="6624" width="200" height="35" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z.opt</e>
+        <e type="operand">z.opt.cal</e>
+        <e type="operand">z.hdt</e>
+        <e type="operand">1</e>
+        <e type="operand">2</e>
+        <e type="function" args="4">mat</e>
+        <e type="function" args="1">max</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="139" left="639" top="6624" width="115" height="30" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.opt</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">mm</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">308.1</e>
+      </result>
+    </math>
+  </region>
+  <region id="140" left="9" top="6678" width="242" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p bold="true">Axial resistance calculation</p>
+    </text>
+  </region>
+  <region id="141" left="9" top="6732" width="242" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Effective stress calculation</p>
+    </text>
+  </region>
+  <region id="142" left="270" top="6732" width="124" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">σ</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operand">z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="143" left="18" top="6786" width="36" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">OCR</e>
+      </input>
+    </math>
+  </region>
+  <region id="144" left="18" top="6840" width="108" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">Installation</e>
+      </input>
+    </math>
+  </region>
+  <region id="145" left="261" top="6840" width="90" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">γ.pre_ins</e>
+        <e type="operand">1</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="146" left="612" top="6840" width="100" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">γ.pre_ins</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">1</e>
+      </result>
+    </math>
+  </region>
+  <region id="147" left="261" top="6876" width="226" height="84" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">γ.pre_hdt</e>
+        <e type="operand">z.ins</e>
+        <e type="function" args="1">Q.v_ins</e>
+        <e type="operand">W.hdt</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">γ.pre_ins</e>
+        <e type="operand">2</e>
+        <e type="operand">1</e>
+        <e type="function" args="4">mat</e>
+        <e type="function" args="1">max</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="148" left="18" top="6912" width="76" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">Flooding</e>
+      </input>
+    </math>
+  </region>
+  <region id="149" left="612" top="6912" width="100" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">γ.pre_hdt</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">1</e>
+      </result>
+    </math>
+  </region>
+  <region id="150" left="261" top="6948" width="190" height="82" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">γ.pre_opt</e>
+        <e type="operand">W.hdt</e>
+        <e type="operand">W.ins</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">γ.pre_ins</e>
+        <e type="operand">2</e>
+        <e type="operand">1</e>
+        <e type="function" args="4">mat</e>
+        <e type="function" args="1">max</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="151" left="18" top="6984" width="84" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">Operating</e>
+      </input>
+    </math>
+  </region>
+  <region id="152" left="612" top="6984" width="124" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">γ.pre_opt</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">3.29</e>
+      </result>
+    </math>
+  </region>
+  <region id="153" left="18" top="7047" width="216" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Import figure 4.11 of [1]</p>
+    </text>
+  </region>
+  <region id="154" left="18" top="7092" width="86" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>File name</p>
+    </text>
+  </region>
+  <region id="155" left="144" top="7092" width="558" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">fileName</e>
+        <e type="operand" style="string">D:\laravel\psi\app\python\DNVGL RP F114 Figure 4-11.XLSX</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="156" left="18" top="7146" width="94" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Sheet name</p>
+    </text>
+  </region>
+  <region id="157" left="261" top="7146" width="142" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">sheetName</e>
+        <e type="operand" style="string">411</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="158" left="18" top="7200" width="94" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Name range</p>
+    </text>
+  </region>
+  <region id="159" left="261" top="7200" width="142" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">range</e>
+        <e type="operand" style="string">A2:C134</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="160" left="261" top="7254" width="429" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">Figure411</e>
+        <e type="operand">fileName</e>
+        <e type="operand">sheetName</e>
+        <e type="operand">range</e>
+        <e type="function" args="3">importData.XLSX</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="161" left="18" top="7272" width="102" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Import data</p>
+    </text>
+  </region>
+  <region id="162" left="261" top="7344" width="514" height="45" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">S.ratio.HE</e>
+        <e type="operand">Figure411</e>
+        <e type="operand">1</e>
+        <e type="function" args="2">col</e>
+        <e type="operand">Figure411</e>
+        <e type="operand">2</e>
+        <e type="function" args="2">col</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">σ</e>
+        <e type="operand" style="unit">kPa</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="3">linterp</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="163" left="594" top="7407" width="166" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">S.ratio.HE</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.46</e>
+      </result>
+    </math>
+  </region>
+  <region id="164" left="261" top="7452" width="514" height="45" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">S.ratio.LE</e>
+        <e type="operand">Figure411</e>
+        <e type="operand">1</e>
+        <e type="function" args="2">col</e>
+        <e type="operand">Figure411</e>
+        <e type="operand">3</e>
+        <e type="function" args="2">col</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">σ</e>
+        <e type="operand" style="unit">kPa</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="3">linterp</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="165" left="594" top="7515" width="166" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="5">
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">S.ratio.LE</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.23</e>
+      </result>
+    </math>
+  </region>
+  <region id="166" left="261" top="7560" width="327" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">S.ratio</e>
+        <e type="operand">0.5</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">S.ratio.HE</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">S.ratio.LE</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="167" left="594" top="7614" width="147" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math exponentialThreshold="5">
+      <input>
+        <e type="operand">1</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="1">S.ratio</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.34</e>
+      </result>
+    </math>
+  </region>
+  <region id="168" left="9" top="7803" width="94" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Beta angle</p>
+    </text>
+  </region>
+  <region id="169" left="216" top="7803" width="178" height="125" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math optimize="2">
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">β</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">1</e>
+        <e type="operand">2</e>
+        <e type="operand">z</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">-</e>
+        <e type="function" args="1">acos</e>
+        <e type="operand">π</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="3">if</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="170" left="612" top="7803" width="124" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.ins</e>
+        <e type="function" args="1">β</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">1.57</e>
+      </result>
+    </math>
+  </region>
+  <region id="171" left="216" top="7911" width="302" height="173" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="function" args="1">ζ</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">&lt;</e>
+        <e type="operand">2</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">β</e>
+        <e type="function" args="1">sin</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">β</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">β</e>
+        <e type="function" args="1">sin</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">β</e>
+        <e type="function" args="1">cos</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">2</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">β</e>
+        <e type="function" args="1">sin</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">β</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">β</e>
+        <e type="function" args="1">sin</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">β</e>
+        <e type="function" args="1">cos</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="3">if</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="172" left="612" top="7911" width="124" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z.ins</e>
+        <e type="function" args="1">ζ</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">1.27</e>
+      </result>
+    </math>
+  </region>
+  <region id="173" left="9" top="7920" width="135" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Wedgeing factor</p>
+    </text>
+  </region>
+  <region id="174" left="18" top="8100" width="299" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Undrained breakout axial resistanceEq 4.15 of [1]</p>
+    </text>
+  </region>
+  <region id="175" left="18" top="8163" width="434" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="operand">γ.pre</e>
+        <e type="function" args="3">F.axe.brk.und</e>
+        <e type="operand">α</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">S.ratio</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">γ.pre</e>
+        <e type="operand">m</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">ζ</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">γ.rate</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">V</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="176" left="18" top="8226" width="380" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">F.axe.brk.und.all</e>
+        <e type="operand">z.ins</e>
+        <e type="operand">W.ins</e>
+        <e type="operand">γ.pre_ins</e>
+        <e type="function" args="3">F.axe.brk.und</e>
+        <e type="operand">z.hdt</e>
+        <e type="operand">W.hdt</e>
+        <e type="operand">γ.pre_hdt</e>
+        <e type="function" args="3">F.axe.brk.und</e>
+        <e type="operand">z.opt</e>
+        <e type="operand">W.opt</e>
+        <e type="operand">γ.pre_opt</e>
+        <e type="function" args="3">F.axe.brk.und</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="177" left="531" top="8244" width="219" height="63" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">F.axe.brk.und.all</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">399.63</e>
+        <e type="operand">1300.35</e>
+        <e type="operand">1316.43</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="178" left="18" top="8352" width="299" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Undrained residual axial resistanceEq 4.17</p>
+    </text>
+  </region>
+  <region id="179" left="18" top="8406" width="513" height="45" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="operand">γ.pre</e>
+        <e type="function" args="3">F.axe.res.und</e>
+        <e type="operand">α</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">S.ratio</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">γ.pre</e>
+        <e type="operand">m</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">ζ</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">γ.rate</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">V</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su_re</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="180" left="18" top="8460" width="380" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">F.axe.res.und.all</e>
+        <e type="operand">z.ins</e>
+        <e type="operand">W.ins</e>
+        <e type="operand">γ.pre_ins</e>
+        <e type="function" args="3">F.axe.res.und</e>
+        <e type="operand">z.hdt</e>
+        <e type="operand">W.hdt</e>
+        <e type="operand">γ.pre_hdt</e>
+        <e type="function" args="3">F.axe.res.und</e>
+        <e type="operand">z.opt</e>
+        <e type="operand">W.opt</e>
+        <e type="operand">γ.pre_opt</e>
+        <e type="function" args="3">F.axe.res.und</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="181" left="522" top="8478" width="211" height="63" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">F.axe.res.und.all</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">159.85</e>
+        <e type="operand">520.14</e>
+        <e type="operand">526.57</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="182" left="18" top="8910" width="283" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Drained breakout axial resistanceEq 4.16 of [1]</p>
+    </text>
+  </region>
+  <region id="183" left="18" top="8964" width="316" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="function" args="2">F.axe.brk.dra</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">δ.peak</e>
+        <e type="function" args="1">tan</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">ζ</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">V</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="184" left="18" top="9027" width="314" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">F.axe.brk.dra.all</e>
+        <e type="operand">z.ins</e>
+        <e type="operand">W.ins</e>
+        <e type="function" args="2">F.axe.brk.dra</e>
+        <e type="operand">z.hdt</e>
+        <e type="operand">W.hdt</e>
+        <e type="function" args="2">F.axe.brk.dra</e>
+        <e type="operand">z.opt</e>
+        <e type="operand">W.opt</e>
+        <e type="function" args="2">F.axe.brk.dra</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="185" left="522" top="9036" width="219" height="63" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">F.axe.brk.dra.all</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">504.66</e>
+        <e type="operand">1674.35</e>
+        <e type="operand">735.81</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="186" left="18" top="9144" width="275" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Drained resiual axial resistanceEq 4.18 of [1]</p>
+    </text>
+  </region>
+  <region id="187" left="18" top="9207" width="309" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="function" args="2">F.axe.res.dra</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">δ.res</e>
+        <e type="function" args="1">tan</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">ζ</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">V</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="188" left="18" top="9261" width="314" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">F.axe.res.dra.all</e>
+        <e type="operand">z.ins</e>
+        <e type="operand">W.ins</e>
+        <e type="function" args="2">F.axe.res.dra</e>
+        <e type="operand">z.hdt</e>
+        <e type="operand">W.hdt</e>
+        <e type="function" args="2">F.axe.res.dra</e>
+        <e type="operand">z.opt</e>
+        <e type="operand">W.opt</e>
+        <e type="function" args="2">F.axe.res.dra</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="189" left="531" top="9288" width="219" height="63" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math exponentialThreshold="5">
+      <input>
+        <e type="operand">F.axe.res.dra.all</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">394.42</e>
+        <e type="operand">1310.36</e>
+        <e type="operand">575.85</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="190" left="9" top="10008" width="259" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p bold="true">Lateral resistance calculation</p>
+    </text>
+  </region>
+  <region id="191" left="9" top="10035" width="316" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Undrained breakout lateral resistanceEq 4.22 of [1]</p>
+    </text>
+  </region>
+  <region id="192" left="9" top="10080" width="676" height="56" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="function" args="2">F.lat.brk.und</e>
+        <e type="operand">1.7</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.61</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">0.23</e>
+        <e type="operand">V</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.83</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">0.6</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">Su</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">*</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="193" left="9" top="10170" width="314" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">F.lat.brk.und.all</e>
+        <e type="operand">z.ins</e>
+        <e type="operand">W.ins</e>
+        <e type="function" args="2">F.lat.brk.und</e>
+        <e type="operand">z.hdt</e>
+        <e type="operand">W.hdt</e>
+        <e type="function" args="2">F.lat.brk.und</e>
+        <e type="operand">z.opt</e>
+        <e type="operand">W.opt</e>
+        <e type="function" args="2">F.lat.brk.und</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="194" left="504" top="10197" width="219" height="63" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">F.lat.brk.und.all</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">602.32</e>
+        <e type="operand">1389.63</e>
+        <e type="operand">1166.44</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="195" left="9" top="10287" width="316" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Undrained residual lateral resistanceEq 4.29 of [1]</p>
+    </text>
+  </region>
+  <region id="196" left="9" top="10341" width="333" height="54" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="function" args="2">F.lat.res.und</e>
+        <e type="operand">0.32</e>
+        <e type="operand">0.80</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.80</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">V</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="197" left="9" top="10413" width="314" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">F.lat.res.und.all</e>
+        <e type="operand">z.ins</e>
+        <e type="operand">W.ins</e>
+        <e type="function" args="2">F.lat.res.und</e>
+        <e type="operand">z.hdt</e>
+        <e type="operand">W.hdt</e>
+        <e type="function" args="2">F.lat.res.und</e>
+        <e type="operand">z.opt</e>
+        <e type="operand">W.opt</e>
+        <e type="function" args="2">F.lat.res.und</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="198" left="513" top="10440" width="219" height="63" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">F.lat.res.und.all</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">688.61</e>
+        <e type="operand">3340.35</e>
+        <e type="operand">1467.95</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="199" left="9" top="10530" width="300" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Drained breakout lateral resistance</p>
+    </text>
+  </region>
+  <region id="200" left="9" top="10566" width="193" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Passive soil resistantEq 4.28 of [1]</p>
+    </text>
+  </region>
+  <region id="201" left="9" top="10629" width="403" height="156" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="function" args="2">F.p</e>
+        <e type="operand">V</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">0.05</e>
+        <e type="operator" args="2">≥</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">5</e>
+        <e type="operand">0.15</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">V</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">1.25</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">2</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">1.25</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="function" args="3">if</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="202" left="9" top="10809" width="431" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Drained breakout lateral resistance Eq. 4.27 of [1]</p>
+    </text>
+  </region>
+  <region id="203" left="18" top="10854" width="276" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="function" args="2">F.lat.brk.dra</e>
+        <e type="operand">0.6</e>
+        <e type="operand">V</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="function" args="2">F.p</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="204" left="18" top="10899" width="314" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">F.lat.brk.dra.all</e>
+        <e type="operand">z.ins</e>
+        <e type="operand">W.ins</e>
+        <e type="function" args="2">F.lat.brk.dra</e>
+        <e type="operand">z.hdt</e>
+        <e type="operand">W.hdt</e>
+        <e type="function" args="2">F.lat.brk.dra</e>
+        <e type="operand">z.opt</e>
+        <e type="operand">W.opt</e>
+        <e type="function" args="2">F.lat.brk.dra</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="205" left="504" top="10926" width="219" height="63" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">F.lat.brk.dra.all</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">1377.11</e>
+        <e type="operand">3827.49</e>
+        <e type="operand">2881.07</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="206" left="9" top="11124" width="422" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Drained residual lateral resistance Eq 4.30 of [1]</p>
+    </text>
+  </region>
+  <region id="207" left="18" top="11178" width="160" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Reference diameter</p>
+    </text>
+  </region>
+  <region id="208" left="225" top="11178" width="101" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">D.ref</e>
+        <e type="operand">508</e>
+        <e type="operand" style="unit">mm</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="209" left="225" top="11223" width="84" height="50" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">A.p</e>
+        <e type="operand">π</e>
+        <e type="operand">D</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="210" left="18" top="11232" width="86" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Pipe area</p>
+    </text>
+  </region>
+  <region id="211" left="612" top="11241" width="108" height="39" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">A.p</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.06</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="212" left="18" top="11295" width="429" height="67" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">z</e>
+        <e type="operand">V</e>
+        <e type="function" args="2">F.lat.res.dra</e>
+        <e type="operand">0.71</e>
+        <e type="operand">V</e>
+        <e type="operand">z</e>
+        <e type="function" args="1">γ'</e>
+        <e type="operand">A.p</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.12</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D.ref</e>
+        <e type="operand">D</e>
+        <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.19</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="bracket">(</e>
+        <e type="operand">V</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="213" left="27" top="11385" width="314" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math decimalPlaces="4" exponentialThreshold="5">
+      <input>
+        <e type="operand">F.lat.res.dra.all</e>
+        <e type="operand">z.ins</e>
+        <e type="operand">W.ins</e>
+        <e type="function" args="2">F.lat.res.dra</e>
+        <e type="operand">z.hdt</e>
+        <e type="operand">W.hdt</e>
+        <e type="function" args="2">F.lat.res.dra</e>
+        <e type="operand">z.opt</e>
+        <e type="operand">W.opt</e>
+        <e type="function" args="2">F.lat.res.dra</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="214" left="495" top="11403" width="219" height="63" color="#000000" bgColor="#80ff80" fontSize="10">
+    <math>
+      <input>
+        <e type="operand">F.lat.res.dra.all</e>
+      </input>
+      <contract>
+        <e type="operand" style="unit">N</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">/</e>
+      </contract>
+      <result action="numeric">
+        <e type="operand">765.83</e>
+        <e type="operand">2910.71</e>
+        <e type="operand">1158.96</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="215" left="18" top="11808" width="70" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p bold="true">RESULTS</p>
+    </text>
+  </region>
+</regions>
