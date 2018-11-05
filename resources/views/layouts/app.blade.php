@@ -10,6 +10,8 @@
 
         @yield('content')
 
+
+
     </div>
 
     <!-- Scripts -->
@@ -19,6 +21,10 @@
 
 </body>
 
+@include('layouts.footer')
+
+
 @include('layouts.error')
+
 
 </html>

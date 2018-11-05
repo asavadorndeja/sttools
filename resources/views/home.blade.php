@@ -3,23 +3,61 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Select analysis</div>
+        <!-- <div class="col-md-6 col-md-offset-2"> -->
+        <div class="col-md-6">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">Onshore pipeline</div>
 
                 <div class="panel-body">
 
-                  <a href="#">DNVGL RP F105 Freespan spanning pipeline</a>
-                  <label>The analysis presents allowable span (screening) in accordance with DNVGL RP F115 </label>
+                  <a href="{{ route('ASME318.index')}}">Wall thickness analysis (ASME B31.8)</a>
+                  <label>Calculate the minimum required wall thickness in accodacne with ASME B31.8 </label>
 
                   <br>
                   <br>
 
-                  <a href="{{ route('f114.index')}}">DNVGL RP F114 Pipeline soil interaction analysis</a>
-                  <label>The analysis presents the embedment, axial pipeline resistance and lateral pipeline resistance in accordance with DNVGL RP F114, May 2017 Edition </label>
                 </div>
 
               </div>
+
+            </div>
+              <div class="col-md-6">
+
+              <div class="panel panel-primary">
+                  <div class="panel-heading">Offshore pipeline</div>
+
+                  <div class="panel-body">
+
+                    <a href="{{ route('DNVGLSTF101WT.index')}}">Wall thickness analysis (DNVGL ST F101)</a>
+                    <label>Calculate the minimum required wall thickness in accodacne with DNVGL ST F101 for Zone 1 and Zone 2</label>
+
+                    <br>
+                    <br>
+
+                    <a href="{{ route('DNVGLRPF109.index')}}">Absolute stability analysis (DNVGL RP F109)</a>
+                    <label>Calculate the absolute vertical and horizontal stability in accordance with DNVGL RP F109. The embedment is excluded.</label>
+
+                    <br>
+                    <br>
+
+                    <a href="{{ route('DNVGLRPF103.index')}}">Anode mass calculation (DNVGL RP F103)</a>
+                    <label>Calculate presents the dimension of anode (Length) in accordance with DNVGL RP F103</label>
+
+                    <br>
+                    <br>
+
+                    <!-- <a href="#">Allowable freespan spanning screening calculation (DNVGL RP F105)</a>
+                    <label>Calculate allowable span (screening) in accordance with DNVGL RP F115 </label>
+
+                    <br>
+                    <br> -->
+
+                    <a href="{{ route('f114.index')}}">Pipeline soil interaction analysis (DNVGL RP F114)</a>
+                    <label>Calculate the embedment, axial pipeline resistance and lateral pipeline resistance in accordance with DNVGL RP F114, May 2017 Edition </label>
+                  </div>
+
+                </div>
 
                 <!-- <div class="panel-body">
                     @if (session('status'))

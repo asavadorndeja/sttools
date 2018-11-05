@@ -7,10 +7,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- <title>{{ config('app.name', 'Synterra') }}</title> -->
+    <title>Syntera</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="sticky-footer.css" rel="stylesheet">
 
     <style media="screen">
       .top-buffer { margin-top:5px; }

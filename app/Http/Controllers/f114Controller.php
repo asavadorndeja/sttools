@@ -32,6 +32,7 @@ class F114Controller extends Controller
         $def_deltaPeak = ([25,26,27,28,29]);
         $def_deltaRes = ([20,21,22,23,24]);
         $def_mShansep = ([0.70,0.70,0.70,0.70,0.70]);
+        $def_analysisOption = 'Undrained.model.2';
 
         $argss = '';
 
@@ -42,6 +43,7 @@ class F114Controller extends Controller
           ['Wopt', $def_Wopt],
           ['I', $def_I],
           ['T0', $def_T0],
+          ['analysisOption', $def_analysisOption]
         );
 
         foreach ($vars as $var) {
@@ -87,42 +89,25 @@ class F114Controller extends Controller
 
           }
 
-
         }
 
-        // dd($request);
 
-        $request->request->add(['Depth' => $def_Depth]);
-        $request->request->add(['gamma' => $def_gamma]);
-        $request->request->add(['su' => $def_su]);
-        $request->request->add(['su_re' => $def_su_re]);
-        $request->request->add(['phi' => $def_phi]);
-        $request->request->add(['deltaPeak' => $def_deltaPeak]);
-        $request->request->add(['deltaRes' => $def_deltaRes]);
-        $request->request->add(['mShansep' => $def_mShansep]);
+        $request->request->add(['Depth' => [$request->z0, $request->z1, $request->z2, $request->z3, $request->z4 ]]);
+        $request->request->add(['gamma' => [$request->gamma0, $request->gamma1, $request->gamma2, $request->gamma3, $request->gamma4 ]]);
+        $request->request->add(['su' => [$request->su0, $request->su1, $request->su2, $request->su3, $request->su4 ]]);
+        $request->request->add(['su_re' => [$request->su_re0, $request->su_re1, $request->su_re2, $request->su_re3, $request->su_re4 ]]);
+        $request->request->add(['phi' => [$request->phi0, $request->phi1, $request->phi2, $request->phi3, $request->phi4 ]]);
+        $request->request->add(['deltaPeak' => [$request->deltaPeak0, $request->deltaPeak1, $request->deltaPeak2, $request->deltaPeak3, $request->deltaPeak4 ]]);
+        $request->request->add(['deltaRes' => [$request->deltaRes0, $request->deltaRes1, $request->deltaRes2, $request->deltaRes3, $request->deltaRes4 ]]);
+        $request->request->add(['mShansep' => [$request->mShansep0, $request->mShansep1, $request->mShansep2, $request->mShansep3, $request->mShansep4 ]]);
 
         // dd($request);
+        // echo($request->Depth);
 
         $execPath = 'C:\Users\JQcomputerDorCom\AppData\Local\Programs\Python\Python37-32\python';
-        $filePath = 'D:\laravel\sttools\app\Http\python\psi.py D:\laravel\sttools\app\Http\python\psi.py';
+        // $filePath = 'D:\laravel\sttools\app\Http\python\psi.py D:\laravel\sttools\app\Http\python\psi.py';
+        $filePath = 'D:\laravel\sttools\app\Http\python\DNVGLRPF114\DNVGLRPF114.py';
 
-        // $args = $request->D;
-        // $args = $args . ' ' . $request->Wins;
-        // $args = $args . ' ' . $request->Whdt;
-        // $args = $args . ' ' . $request->Wopt;
-        // $args = $args . ' ' . $request->I;
-        // $args = $args . ' ' . $request->T0;
-        // $args = $args . ' ' . implode(',', $request->Depth);
-        // $args = $args . ' ' . implode(',', $request->gamma);
-        // $args = $args . ' ' . implode(',', $request->Su);
-        // $args = $args . ' ' . implode(',', $request->Su_re);
-        // $args = $args . ' ' . implode(',', $request->phi);
-        // $args = $args . ' ' . implode(',', $request->deltaPeak);
-        // $args = $args . ' ' . implode(',', $request->deltaRes);
-        // $args = $args . ' ' . implode(',', $request->mShansep);
-
-
-        // dd($argss);
 
         $command = ($execPath . ' ' . $filePath . ' '. $argss);
 
@@ -130,10 +115,12 @@ class F114Controller extends Controller
 
         // $command = escapeshellcmd('C:\Users\JQcomputerDorCom\AppData\Local\Programs\Python\Python37-32\python D:\laravel\psi\app\python\psi.py D:\laravel\psi\app\python\psi.py 1 1');
         $output = shell_exec($command);
-        // echo $output;
+        $outputJson = json_decode($output, true);
 
         // dd($request->request);
-        return view('pages.f114.index', compact('request', 'output'));
+        $analysisOptions =['Undrained.model.1', 'Undrained.model.2', 'Drained'];
+        // dd($outputJson);
+        return view('pages.f114.index', compact('request', 'output', 'outputJson', 'analysisOptions'));
     }
 
     /**

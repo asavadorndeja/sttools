@@ -225,11 +225,11 @@
                 </div>
 
                 <div class='col-md-1'>
-                    <input class="form-control" name="z{{ $i }}" type="text" value={{ $i }} id="z{{ $i }}">
+                    <input class="form-control" name="z{{ $i }}" type="text" value={{ $request->Depth[$i] }} id="z{{ $i }}">
                 </div>
 
                 <div class='col-md-1'>
-                    <input class="form-control" name="gamma{{ $i }}" type="text" value={{ $request->gamma[$i]}} id="gamma{{ $i }}">
+                    <input class="form-control" name="gamma{{ $i }}" type="text" value={{ $request->gamma[$i] }} id="gamma{{ $i }}">
                 </div>
 
                 <div class='col-md-1'>
@@ -264,21 +264,46 @@
       </div>
     </div>
 
-    <div class="form-group">
-      <div class="col-4">
-        <button type="Submit" value="Submit" class="btn btn-primary">Analysis</button>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+          Analysis options
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+
+          <div class="col-md-3">
+            <select name="linePIpe" id="linePIpe" class="form-control input-md">
+                @foreach($analysisOptions as $analysisOption)
+                  @if($request->analysisOption == $analysisOption)
+                    <option selected value="{{ $analysisOption }}">{{ $analysisOption }}</option>
+                  @else
+                    <option value="{{ $analysisOption }}">{{ $analysisOption }}</option>
+                  @endif
+                @endforeach
+              </select>
+          </div>
+
+
+
+          <div class="col-4">
+            <button type="Submit" value="Submit" class="btn btn-primary">Analysis</button>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
+
 
   </form>
 </div>
 
-<hr>
+<!-- <hr> -->
 
 <div class="container">
 
-  <div class="panel panel-primary">
-    <!-- <div class="panel-heading">
+  <!-- <div class="panel panel-primary">
+    <div class="panel-heading">
         Pipeline-Soil Interaction Input
     </div>
     <div class="panel-body">
@@ -292,6 +317,41 @@
 
   <div class="panel panel-primary">
     <div class="panel-heading">
+        Analysis results
+    </div>
+    <div class="panel-body">
+      <!-- <div class='col-md-12'> -->
+
+      <table style="width:100%">
+        <tr>
+          <th>Description</th>
+          <th>Installation</th>
+          <th>Hydrotest</th>
+          <th>Operation</th>
+        </tr>
+
+        @foreach ($outputJson as $key => $val)
+          @foreach ($val as $key1 => $val1)
+            @if ($key1 == 'output')
+              @foreach ($val1 as $key2 => $val2)
+                <tr>
+                  <td>{{$key2}}</td>
+                @foreach ($val2 as $key3 => $val3)
+                  <td>{{ number_format($val3,2) }}</td>
+                @endforeach
+              </tr>
+              @endforeach
+            @endif
+          @endforeach
+        @endforeach
+      </table>
+
+    </div>
+  </div>
+
+
+  <!-- <div class="panel panel-primary">
+    <div class="panel-heading">
         Pipeline-soil interaction analysis output
     </div>
     <div class="panel-body">
@@ -299,10 +359,10 @@
         <textarea name="name" rows="10" cols="150">
           {{ $output }}
         </textarea>
-          <!-- <input type="Text" class="form-control" id="output" name="output" value="{{ $output }}"> -->
+          <input type="Text" class="form-control" id="output" name="output" value="{{ $output }}">
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
 

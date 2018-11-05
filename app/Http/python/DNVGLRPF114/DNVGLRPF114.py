@@ -1,6 +1,7 @@
 #!/usr/bin/python;
 import sys
 import ast
+import json
 
 import math as m
 import numpy as np
@@ -98,7 +99,7 @@ d_Woffset = 0
 #default pipe weight, 1000 N/m
 d_Wpipe = 1000
 
-d_vMethod = 'UD2'
+d_vMethod = 'Undrained.model.2'
 
 def N_DNVF114(phi:float):
     phiRad = m.radians(phi)
@@ -494,11 +495,11 @@ def QvDrain(z:float, D:float, phi:float=d_phi, gamma:float=d_gamma, Woffset:floa
 # This function return vertical response in accodance with equation 4.2, 4.8 and 4.9 of DNVGL RP F114
 def QvAll(z:float, D:float, method:str, su:float, phi:float, gamma:float, surface:float, Woffset:float):
 
-    if method == 'UD1':
+    if method == 'Undrained.model.1':
         QvAll = QvUndrainM1(z, D, su, gamma, surface, Woffset)
-    elif method == 'UD2':
+    elif method == 'Undrained.model.2':
         QvAll = QvUndrainM2(z, D, su, gamma, Woffset)
-    elif method == 'D':
+    elif method == 'Drained':
         QvAll = QvDrain(z, D, phi, gamma, Woffset)
 
     return QvAll;
@@ -548,11 +549,13 @@ def Seff_zgamma(z:float, gamma:float):
     return Seff_zgamma;
 
 # This function return te undrained lateral breakout resistance in accodance with DNVGL RP F114 Equation 4.15
-def FAxeBrkUnd(z:float, D:float, alpha:float=d_alpha, su:float=d_su, gamma:float=d_gamma, OCR:float=1, m:float=0.775, gammaRate:float=d_gammaRate, V:float=d_Wpipe):
+def FAxeBrkUnd(z:float, D:float, alpha:float=d_alpha, su:float=d_su, gamma:float=d_gamma, OCR:float=1, mShansep:float=0.775, gammaRate:float=d_gammaRate, V:float=d_Wpipe):
 
     # print(z, D, alpha, su, gamma, OCR, gammaRate, V)
 
     su_z = np.interp(z,su[:,0],su[:,1])
+    m = np.interp(z,mShansep[:,0],mShansep[:,1])
+
     Seff_z = Seff_zgamma(z, gamma)
     WF = WF_zd(z, D)
     # SuOSeff = su_z/Seff_z
@@ -671,7 +674,7 @@ def FLatResUnd(z:float, D:float, V:float=d_Wpipe):
     return FLatResUnd;
 
 # This function return the lateral displacement of pipeline in accorance with 4.30, 4.31 and 4.32 of DNVGL RP F114
-def FLatResDraM2(D:float, gamma:float=d_gamma, V:float=d_Wpipe):
+def FLatResDraM2(z:float, D:float, gamma=d_gamma, V:float=d_Wpipe):
 
     Dref = 508e-03
     Ap = 0.25*pi*(D**2)
@@ -681,12 +684,12 @@ def FLatResDraM2(D:float, gamma:float=d_gamma, V:float=d_Wpipe):
     T1 = 0.71*(V/(gamma_z*Ap))**0.12
     T2 = (Dref/D)**0.18
 
-    FLatResDraM2_BE = T1*T2
+    FLatResDraM2_BE = T1*T2*V
     FLatResDraM2_LE = (0.05 + 0.70*(FLatResDraM2_BE/V))*V
     FLatResDraM2_HE = (0.18 + 1.15*(FLatResDraM2_BE/V))*V
 
     # FLatResDraM2 = [FLatResDraM2_LE, FLatResDraM2_BE, FLatResDraM2_HE]
-    FLatResDraM2 = T1
+    FLatResDraM2 = FLatResDraM2_BE
 
     return FLatResDraM2;
 
@@ -708,18 +711,180 @@ def DLat(z:float, D:float):
 
     return DLatTri;
 
-# print(__name__)
-# print(sys.argv)
+def DNVGLRPF114(D, Wins, Whdt, Wopt, I, T0, vMethod, Depth, gamma, su, su_re, phi, deltaPeak, deltaRes, mShansep, E=2.07E+11, alpha =1, gammaRate = 1, z= 1e-10, zIns = 1e-10):
 
-# Import AppData
-D = float(sys.argv[2])
-Wins = float(sys.argv[3])
-Whdt = float(sys.argv[4])
-Wopt = float(sys.argv[5])
-I = float(sys.argv[6])
-T0 = float(sys.argv[7])
-E = 2.07e+11
+    Depth = Depth.split(',')
+    gamma = gamma.split(',')
+    su = su.split(',')
+    su_re = su_re.split(',')
+    phi = phi.split(',')
+    deltaPeak = deltaPeak.split(',')
+    deltaRes = deltaRes.split(',')
+    mShansep = mShansep.split(',')
 
+    gamma = np.column_stack((Depth, gamma))
+    gamma = gamma.astype(np.float)
+    su = np.column_stack((Depth, su))
+    su = su.astype(np.float)
+    su_re = np.column_stack((Depth, su_re))
+    su_re = su_re.astype(np.float)
+    phi = np.column_stack((Depth, phi))
+    phi = phi.astype(np.float)
+    deltaPeak = np.column_stack((Depth, deltaPeak))
+    deltaPeak = deltaPeak.astype(np.float)
+    deltaRes = np.column_stack((Depth, deltaRes))
+    deltaRes = deltaRes.astype(np.float)
+    deltaRes = np.column_stack((Depth, deltaRes))
+    deltaRes = deltaRes.astype(np.float)
+    mShansep = np.column_stack((Depth, mShansep))
+    mShansep = deltaRes.astype(np.float)
+
+
+    W = [Wins, Whdt, Wopt]
+    stages = ['Installation','Hydrostatic test', 'Operation']
+
+    #Step 1: Determine pipeline embedment
+    #Step 1.1: Guess the inital embedment value
+
+    #Step 1.2: Solving installation embedment
+    data = (D, vMethod, su_re, phi, gamma, d_surface, 0, W[0], I, E, T0)
+    zIns = fsolve(klay, z, args=data)
+    kLay = QvAll(zIns, D, vMethod, su_re, phi, gamma, d_surface, 0)/W[0]
+
+    if kLay < 1:
+       data = (D, vMethod, su_re, phi, gamma, d_surface, W[0])
+       zIns = fsolve(QvAll, z, args = data)
+
+    # Step 1.3: Solving hydrotest embedment
+    data = (D, vMethod, su, phi, gamma, d_surface, W[1])
+    zHdt = fsolve(QvAll, z, args = data)
+
+    # Step 1.4: Solving operating embedment
+    data = (D, vMethod, su, phi, gamma, d_surface, W[2])
+    zOpt = fsolve(QvAll, z, args = data)
+
+    # Step 1.5: Report
+    zCal = [zIns, zHdt, zOpt]
+    zUse = [zIns, max([zIns, zHdt]), max(zIns, zHdt, zOpt)]
+
+
+    # #Step 2: Determine the axial friction coefficient
+    # #Step 2.1: Determine OCR
+
+    SeffMax = kLay*W[0]
+    OCR = [0 for i in range(len(stages))]
+
+    for i in range(len(stages)):
+
+       if i == 0:
+           if kLay < 1.0:
+               Seff = W[i]
+           else:
+               Seff = kLay*W[i]
+       else:
+           Seff = W[i]
+
+       if Seff > SeffMax:
+           SeffMax = Seff
+
+       OCR[i] = SeffMax/Seff
+
+    #Step 2.2: Undrained resistance
+    FAxeBrkUndrain = [0 for i in range(len(stages))]
+    FAxeResUndrain = [0 for i in range(len(stages))]
+    FAxeBrkDrain = [0 for i in range(len(stages))]
+    FAxeResDrain = [0 for i in range(len(stages))]
+
+    for i in range(len(stages)):
+
+        FAxeBrkUndrain[i] = FAxeBrkUnd(zUse[i][0], D, alpha, su, gamma, OCR[i], mShansep, gammaRate, W[i])
+        su_z = np.interp(z,su[:,0],su[:,1])
+        su_re_z = np.interp(z,su_re[:,0],su_re[:,1])
+        st = su_z/su_re_z
+        FAxeResUndrain[i] = FAxeBrkUndrain[i]/st
+
+        FAxeBrkDrain[i] = FAxeDra(zUse[i][0], D, deltaPeak, W[i])
+        FAxeResDrain[i] = FAxeDra(zUse[i][0], D, deltaRes, W[i])
+
+    #Step 3: Determine laterl friction coefficient
+    FLatBrkUndrainModel2 = [0 for i in range(len(stages))]
+    FLatResUndrain = [0 for i in range(len(stages))]
+    FLatBrkDrainModel2 = [0 for i in range(len(stages))]
+    FLatResDrain = [0 for i in range(len(stages))]
+
+    for i in range(len(stages)):
+
+        FLatBrkUndrainModel2[i] = FLatBrkUndM2(zUse[i][0],D, su, gamma, W[i])
+        FLatResUndrain[i] = FLatResUnd(zUse[i][0], D, W[i])
+        FLatBrkDrainModel2[i] = FLatBrkDraM2(zUse[i][0], D, gamma, W[i])
+        FLatResDrain[i] = FLatResDraM2(zUse[i][0], D, gamma, W[i])
+
+    # Prepare the result for export
+
+
+    input = [D, Wins, Whdt, Wopt, I, T0, vMethod, Depth, gamma, su, su_re, phi, deltaPeak, deltaRes, mShansep, E, alpha, gammaRate, z, zIns]
+    output = [klay, zCal, zUse, OCR, FAxeBrkUndrain, FAxeResUndrain, FAxeBrkDrain, FAxeResDrain, FLatBrkUndrainModel2, FLatResUndrain, FLatBrkDrainModel2, FLatResDrain]
+    report = []
+
+    resultRaw = [input, output, report]
+
+    inputJson = {
+        'Outer diameter, m':D,
+        'Submerged weight (Installation), N/m':Wins,
+        'Submerged weight (Hydrotest), N/m':Whdt,
+        'Submerged weight (Operation), N/m':Wopt,
+        'Section MOI, N/m4': I,
+        'Bottom tension, N': T0,
+        'Vertical response method': vMethod,
+        'Depth, m': Depth,
+        # 'Submerged unit weight, N/cu.m': [gamma[0]],
+        # 'Intact shear strength profile, N/Sq.m.': [su[0],su[1]],
+        # 'Remoulded shear strength profile, N/Su.m': [su_re[0],su_re[1]],
+        # 'Friction angle profile, Deg': [phi[0],phi[1]],
+        # 'Peak interface friction angle, Deg': [deltaPeak[0],deltaPeak[1]],
+        # 'Residual interface friction angle, Deg': [deltaRes[0],deltaRes[1]],
+        # 'Shansep parameter m, -':  [mShansep[0],mShansep[1]],
+        'Modulus of elasticity, Pa': E,
+        'Alpha constant, -': alpha,
+        'Gamma constant, -': gammaRate,
+        'Initial embedment, -': z,
+    }
+
+
+    outputJson = {
+        'Touchdown lay factor, -':[kLay[0]],
+        'Calculated penetration, mm':[zCal[0][0]*1000,zCal[1][0]*1000,zCal[2][0]*1000],
+        'Use penetration, mm':[zUse[0][0]*1000,zUse[1][0]*1000,zUse[2][0]*1000],
+        'Overcosolidation raio, -':[OCR[0][0], OCR[1], OCR[2]],
+        'Axial breakout undrained resistant, N/m':[FAxeBrkUndrain[0][0], FAxeBrkUndrain[1], FAxeBrkUndrain[2]],
+        'Axial residual undrained resistant, N/m':[FAxeResUndrain[0][0], FAxeResUndrain[1], FAxeResUndrain[2]],
+        'Axial breakout drained resistant, N/m':FAxeBrkDrain,
+        'Axial residual drained resistant, N/m, -':FAxeResDrain,
+        'Lateral breakout undrained resistant, N/m':FLatBrkUndrainModel2,
+        'Lateral residual undrained resistant, N/m':FLatResUndrain,
+        'Lateral breakout drained resistant, N/m':FLatBrkDrainModel2,
+        'Lateral residual drained resistant, N/m, -':FLatResDrain,
+    }
+
+    reportJson = {}
+
+    resultJson = {'input':inputJson, 'output':outputJson, 'report':reportJson}
+
+
+    result = [resultRaw, resultJson]
+    # result = outputJson
+
+    return result;
+
+# print (sys.argv)
+
+D = float(sys.argv[1])
+Wins = float(sys.argv[2])
+Whdt = float(sys.argv[3])
+Wopt = float(sys.argv[4])
+I = float(sys.argv[5])
+T0 = float(sys.argv[6])
+vMethod = sys.argv[7]
 Depth = sys.argv[8]
 gamma = sys.argv[9]
 su = sys.argv[10]
@@ -727,182 +892,27 @@ su_re = sys.argv[11]
 phi = sys.argv[12]
 deltaPeak = sys.argv[13]
 deltaRes = sys.argv[14]
+mShansep = sys.argv[15]
 
-Depth = Depth.split(',')
-gamma = gamma.split(',')
-su = su.split(',')
-su_re = su_re.split(',')
-phi = phi.split(',')
-deltaPeak = deltaPeak.split(',')
-deltaRes = deltaRes.split(',')
-
-gamma = np.column_stack((Depth, gamma))
-gamma = gamma.astype(np.float)
-
-su = np.column_stack((Depth, su))
-su = su.astype(np.float)
-
-su_re = np.column_stack((Depth, su_re))
-su_re = su_re.astype(np.float)
-
-phi = np.column_stack((Depth, phi))
-phi = phi.astype(np.float)
-
-deltaPeak = np.column_stack((Depth, deltaPeak))
-deltaPeak = deltaPeak.astype(np.float)
-
-deltaRes = np.column_stack((Depth, deltaRes))
-deltaRes = deltaRes.astype(np.float)
-
-vMethod = 'UD2'
-
-W = [Wins, Whdt, Wopt]
-stages = ['Installation','Hydrostatic test', 'Operation']
-alpha =1
-gammaRate = 1
-shansep_m = [0.70, 0.70, 0.70]
-
-#Step 1: Determine pipeline embedment
-#Step 1.1: Guess the inital embedment value
-z= 1e-10
-zIns = 0.2
-
-# def klay(z:float, D:float, method:str, su:float=d_su, phi:float=d_phi, gamma:float=d_gamma, surface:float=d_surface, Woffset:float=d_Woffset, Wpipe:float=d_Wpipe, I:float=d_I, E:float=d_E, T0:float=d_T0 ):
-
-#Step 1.2: Solving installation embedment
-data = (D, vMethod, su_re, phi, gamma, d_surface, 0, W[0], I, E, T0)
-zIns = fsolve(klay, z, args=data)
-
-klay = QvAll(zIns, D, vMethod, su_re, phi, gamma, d_surface, 0)/W[0]
-
-if klay < 1:
-   data = (D, vMethod, su_re, phi, gamma, d_surface, W[0])
-   zIns = fsolve(QvAll, z, args = data)
-
-# Step 1.3: Solving hydrotest embedment
-data = (D, vMethod, su, phi, gamma, d_surface, W[1])
-zHdt = fsolve(QvAll, z, args = data)
-
-# Step 1.4: Solving operating embedment
-data = (D, vMethod, su, phi, gamma, d_surface, W[2])
-zOpt = fsolve(QvAll, z, args = data)
-
-# Step 1.5: Report
-zCal = [zIns, zHdt, zOpt]
-zUse = [zIns, max([zIns, zHdt]), max(zIns, zHdt, zOpt)]
+# D = 0.27305
+# Wins = 844.22
+# Whdt = 2780.96
+# Wopt = 1222.12
+# I = 8.822E-5
+# T0 = 250000
+# vMethod = 'Undrained.model.2'
+# Depth = '0,1,2,3,4'
+# gamma = '5000,5000,5000,5000,5000'
+# su = '1000,2000,3000,4000,5000'
+# su_re = '400,800,1200,1600,2000'
+# phi = '30,31,32,33,34'
+# deltaPeak = '25,26,27,28,29'
+# deltaRes = '20,21,22,23,24'
+# mShansep = '0.7,0.7,0.7,0.7,0.7'
 
 
-print (sTitle, ' Version ', sVersion)
-print (separate)
-print ('Embedment analysis')
-print ('Laying factor')
-print (fFormat.format(float(klay), precision ))
-print ('Caculated embedment (mm) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(zCal[0]*1000), precision ),", ", fFormat.format(float(zCal[1]*1000), precision ),", ", fFormat.format(float(zCal[2]*1000), precision ))
-print ('Used embedment (mm) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(zUse[0]*1000), precision ),", ", fFormat.format(float(zUse[1]*1000), precision ),", ", fFormat.format(float(zUse[2]*1000), precision ))
+result = DNVGLRPF114(D, Wins, Whdt, Wopt, I, T0, vMethod, Depth, gamma, su, su_re, phi, deltaPeak, deltaRes, mShansep)
 
-#Step 2: Determine the axial friction coefficient
-#Step 2.1: Determine OCR
-
-SeffMax = klay*W[0]
-OCR = [0 for i in range(len(stages))]
-
-for i in range(len(stages)):
-
-   if i == 0:
-       if klay < 1.0:
-           Seff = W[i]
-       else:
-           Seff = klay*W[i]
-   else:
-       Seff = W[i]
-
-   if Seff > SeffMax:
-       SeffMax = Seff
-
-   OCR[i] = SeffMax/Seff
-
-
-# print(deltaRes)
-
-#Step 2.2: Undrained resistance
-FAxeBrkUndrain = [0 for i in range(len(stages))]
-FAxeResUndrain = [0 for i in range(len(stages))]
-FAxeBrkDrain = [0 for i in range(len(stages))]
-FAxeResDrain = [0 for i in range(len(stages))]
-
-for i in range(len(stages)):
-
-# z, D, alpha, su, gamma, OCR, m=0, gammaRate, V:float
-
-    # print (zUse[i][0])
-
-    # def FAxeBrkUnd(z:float, D:float, alpha:float=d_alpha, su:float=d_su, gamma:float=d_gamma, OCR:float=1, m:float=0.775, gammaRate:float=d_gammaRate, V:float=d_Wpipe)
-    #
-    FAxeBrkUndrain[i] = FAxeBrkUnd(zUse[i][0], D, alpha, su, gamma, OCR[i], shansep_m[i], gammaRate, W[i])
-    # print(zUse[i][0], D, alpha, su, gamma, OCR[i], shansep_m[i], gammaRate, W[i])
-    # print (zUse[i][0], ',', FAxeBrkUndrain[i])
-
-    su_z = np.interp(z,su[:,0],su[:,1])
-    su_re_z = np.interp(z,su_re[:,0],su_re[:,1])
-    st = su_z/su_re_z
-    FAxeResUndrain[i] = FAxeBrkUndrain[i]/st
-
-    FAxeBrkDrain[i] = FAxeDra(zUse[i][0], D, deltaPeak, W[i])
-    FAxeResDrain[i] = FAxeDra(zUse[i][0], D, deltaRes, W[i])
-
-print (separate)
-print ('Axial resistant analysis')
-print ('Overconsolidation ratio (-) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(OCR[0]), precision ),", ", fFormat.format(float(OCR[1]), precision ),", ", fFormat.format(float(OCR[2]), precision ))
-print ('Undrained Axial Breakout Resistant (N/m) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(FAxeBrkUndrain[0]), precision ),", ", fFormat.format(float(FAxeBrkUndrain[1]), precision ),", ", fFormat.format(float(FAxeBrkUndrain[2]), precision ))
-print ('Undrained Axial Residual Resistant (N/m) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(FAxeResUndrain[0]), precision ),", ", fFormat.format(float(FAxeResUndrain[1]), precision ),", ", fFormat.format(float(FAxeResUndrain[2]), precision ))
-print ('Drained Axial Breakout Resistant (N/m) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(FAxeBrkDrain[0]), precision ),", ", fFormat.format(float(FAxeBrkDrain[1]), precision ),", ", fFormat.format(float(FAxeBrkDrain[2]), precision ))
-print ('Drained Axial Residual Resistant (N/m) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(FAxeResDrain[0]), precision ),", ", fFormat.format(float(FAxeResDrain[1]), precision ),", ", fFormat.format(float(FAxeResDrain[2]), precision ))
-
-#Step 3: Determine laterl friction coefficient
-FLatBrkUndrainModel2 = [0 for i in range(len(stages))]
-FLatResUndrain = [0 for i in range(len(stages))]
-FLatBrkDrainModel2 = [0 for i in range(len(stages))]
-FLatResDrain = [0 for i in range(len(stages))]
-
-for i in range(len(stages)):
-
-    FLatBrkUndrainModel2[i] = FLatBrkUndM2(zUse[i][0],D, su, gamma, W[i])
-    FLatResUndrain[i] = FLatResUnd(zUse[i][0], D, W[i])
-    FLatBrkDrainModel2[i] = FLatBrkDraM2(zUse[i][0], D, gamma, W[i])
-    FLatResDrain[i] = FLatResDraM2(D, W[i])
-
-print (separate)
-print ('Lateral resistant analysis')
-print('Latearal resistance calculation')
-print ('Undrained lateral breakout resistant (Model 2) (N/m) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(FLatBrkUndrainModel2[0]), precision ),", ", fFormat.format(float(FLatBrkUndrainModel2[1]), precision ),", ", fFormat.format(float(FLatBrkUndrainModel2[2]), precision ))
-print ('Undrained lateral residual resistant (Model 2) (N/m) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(FLatResUndrain[0]), precision ),", ", fFormat.format(float(FLatResUndrain[1]), precision ),", ", fFormat.format(float(FLatResUndrain[2]), precision ))
-print ('Drained lateral breakout resistant (Model 2) (N/m) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(FLatBrkDrainModel2[0]), precision ),", ", fFormat.format(float(FLatBrkDrainModel2[1]), precision ),", ", fFormat.format(float(FLatBrkDrainModel2[2]), precision ))
-print ('Drained lateral residual resistant (Model 2) (N/m) Installation, Hydrostatic test, Operating')
-print (fFormat.format(float(FLatResDrain[0]), precision ),", ", fFormat.format(float(FLatResDrain[1]), precision ),", ", fFormat.format(float(FLatResDrain[2]), precision ))
-
-
-#
-# print(FLatBrkUndrainModel1)
-# print(FLatBrkUndrainModel2)
-
-
-# klay = QvAll(zIns, D, vMethod, su_re, phi, gamma, surface, 0)/W[0]
-# print (klay);
-
-# def hello(a=1, b=1):
-#     print ("hello and that's your sum:")
-#     sum = a+b
-#     print (sum)
-
-# if __name__== "__main__":
-#     hello(int(sys.argv[2]), int(sys.argv[3]))
+resultJson = []
+resultJson.append(result[1])
+print (json.dumps(resultJson))
