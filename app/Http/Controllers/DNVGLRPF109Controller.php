@@ -199,10 +199,10 @@ class DNVGLRPF109Controller extends Controller
 
         foreach ($args as $key => $arg) {
 
-          $execPath = 'C:\Users\JQcomputerDorCom\AppData\Local\Programs\Python\Python37-32\python';
-          $filePath = 'D:\laravel\sttools\app\Http\python\DNVGLRPF109\DNVGLRPF109.py';
-          // $execPath = 'python3';
-          // $filePath = '/var/www/html/app/Http/python/DNVGLRPF109.py'
+          // $execPath = 'C:\Users\JQcomputerDorCom\AppData\Local\Programs\Python\Python37-32\python';
+          // $filePath = 'D:\laravel\sttools\app\Http\python\DNVGLRPF109\DNVGLRPF109.py';
+          $execPath = 'python3';
+          $filePath = '/var/www/html/app/Http/python/DNVGLRPF109.py'
           $command = ($execPath . ' ' . $filePath . ' '. $arg);
           $output[$key] = shell_exec($command);
         }

@@ -5,7 +5,7 @@
           <div class="collapse navbar-collapse" id="app-navbar-collapse">
               <ul class="nav navbar-nav">
                 <ul class="nav navbar-nav">
-                  <li><a href="{{ url('/home') }}">Pipeline toolbox</a></li>
+                  <li><a href="{{ url('/home') }}">Synterra toolbox</a></li>
                 </ul>
               </ul>
           </div>

@@ -35,7 +35,7 @@
           Pipeline data
         </div>
         <div class="panel-body">
-            <img src="{{URL::asset('/image/F114.png')}}" alt="Input "></div>
+            <img src="{{URL::asset('/image/F114.png')}}" alt="Input " class="img-responsive center-block"></div>
       </div>
     </div>
 

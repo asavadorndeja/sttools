@@ -33,7 +33,7 @@
         </div>
         <div class="panel-body">
           <figure class="panel-image">
-            <img src="{{URL::asset('/image/DNVGLRPF109.png')}}" alt="Input "></div>
+            <img src="{{URL::asset('/image/DNVGLRPF109.png')}}" alt="Input " class="img-responsive center-block"></div>
           </figure>
       </div>
     </div>
@@ -347,8 +347,47 @@
       </div>
     </div>
 
-
+</form>
 </div>
 
+
+<!-- <form method="post" class="form-group" action="{{ action('EmailController@sendReport') }}">
+
+  {{ csrf_field() }}
+
+  <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+          Get a report
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-12">
+              <label>Insert your email. The report will be sent you shortly. Syntera confirms that your email will be used for report delivery only.</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input required class="form-control" placeholder="Your email address" name="Email" type="Email" id="Email">
+            </div>
+            <div class="col-md-6">
+              <button type="Report" value="Submit" class="btn btn-primary">Get a report</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="flash-message">
+    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+      @if(Session::has('alert-' . $msg))
+
+      <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+      @endif
+    @endforeach
+</div> -->
 
 @endsection

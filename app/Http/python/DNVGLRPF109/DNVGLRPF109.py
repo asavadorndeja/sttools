@@ -11,6 +11,11 @@ import scipy.integrate as integrate
 g = 9.81
 fFormat = "{:.{}f}"
 
+sTitle = "DNVGL-RP-F109 Absolute stability analysis"
+sVersion = "0.0.0-alhpa.00"
+sDate = "12 November 2018"
+sReference = "On-bottom stability design of subramine pipelines, DNVGL-RP-F109"
+
 
 # This program performs On-Bottom Stability Analysis (CLAY) Based on DNVGL-RP-F109
 # References
@@ -387,7 +392,7 @@ class DNVGLRPF109:
         self.UCY = self.Cal_UCY(pl.GammaSC, self.FYY, sb.f, self.FZZ, pl.Ws, self.FR)   # Unity value in Y direction, -, Eq 3.38 of [1]
         self.UCZ = self.Cal_UCZ(pl.GammaSC, self.FZZ, pl.Ws)                            # Unity value in Z direction, -, Eq 3.39 of [1]
         # self.Json = self.outputJson
-
+        self.pl = pl
 
     # This function return mean permendiculra current velocity factor, Eq 3.3 of [1]
     def CalFlowFactor(self, D,zr,z0,Ang):
@@ -485,7 +490,17 @@ class DNVGLRPF109:
             'Unity in vertical direction, UCZ, -': fFormat.format(self.UCZ.real, 2),
         }
 
-        result = [input, output]
+        report = {
+            'Calculation title': sTitle,
+            'Version': sVersion,
+            'Date' : sDate,
+            'References' : sReference,
+            'input':input,
+            'output':output,
+            'check': self.pl.zp,
+        }
+
+        result = [input, output,report]
 
         return result
 
@@ -576,18 +591,7 @@ seabed = TSeabedOBT(
     TrenchDepth = sbTrenchDepth,
     TrenchAng = sbTrenchAngle,
     )
-#pipe.ShowData()
-#seabed.ShowData()
-'''
-print('enWD ',enWD)
-print('enHs ',enHs)
-print('enTp ',enTp)
-print('enJSW ',enJSW)
-print('enUr ',enUr)
-print('enZr ',enZr)
-print('enSeaDen ',enSeaDen)
-print('enEnvDir ',enEnvDir)
-'''
+
 envi = TEnvForOBT(
     WDepth = enWD,
     Hs = enHs,

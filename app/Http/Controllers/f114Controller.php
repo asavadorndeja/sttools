@@ -101,13 +101,14 @@ class F114Controller extends Controller
         $request->request->add(['deltaRes' => [$request->deltaRes0, $request->deltaRes1, $request->deltaRes2, $request->deltaRes3, $request->deltaRes4 ]]);
         $request->request->add(['mShansep' => [$request->mShansep0, $request->mShansep1, $request->mShansep2, $request->mShansep3, $request->mShansep4 ]]);
 
-        // dd($request);
+        // dd($argss);
         // echo($request->Depth);
 
         $execPath = 'C:\Users\JQcomputerDorCom\AppData\Local\Programs\Python\Python37-32\python';
         // $filePath = 'D:\laravel\sttools\app\Http\python\psi.py D:\laravel\sttools\app\Http\python\psi.py';
         $filePath = 'D:\laravel\sttools\app\Http\python\DNVGLRPF114\DNVGLRPF114.py';
 
+        dd($argss);
 
         $command = ($execPath . ' ' . $filePath . ' '. $argss);
 

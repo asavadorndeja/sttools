@@ -183,10 +183,10 @@ class DNVGLSTF101WTController extends Controller
 
       // dd($args);
 
-      $execPath = 'C:\Users\JQcomputerDorCom\AppData\Local\Programs\Python\Python37-32\python';
-      $filePath = 'D:\laravel\sttools\app\Http\python\DNVGLSTF101\DNVGLSTF101WT.py';
-      // $execPath = 'python3';
-      // $filePath = '/var/www/html/app/Http/python/DNVGLSTF101WT.py'
+      // $execPath = 'C:\Users\JQcomputerDorCom\AppData\Local\Programs\Python\Python37-32\python';
+      // $filePath = 'D:\laravel\sttools\app\Http\python\DNVGLSTF101\DNVGLSTF101WT.py';
+      $execPath = 'python3';
+      $filePath = '/var/www/html/app/Http/python/DNVGLSTF101WT.py'
       $command = ($execPath . ' ' . $filePath . ' '. $args[0]);
       //echo($command);
       $output = shell_exec($command);

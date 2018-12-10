@@ -136,10 +136,10 @@ class DNVGLRPF103Controller extends Controller
         // dd($argss);
 
 
-        $execPath = 'C:\Users\JQcomputerDorCom\AppData\Local\Programs\Python\Python37-32\python';
-        $filePath = 'D:\laravel\sttools\app\Http\python\DNVGLRPF103\DNVGLRPF103.py';
-        // $execPath = 'python3';
-        // $filePath = '/var/www/html/app/Http/python/DNVGLRPF103.py'
+        // $execPath = 'C:\Users\JQcomputerDorCom\AppData\Local\Programs\Python\Python37-32\python';
+        // $filePath = 'D:\laravel\sttools\app\Http\python\DNVGLRPF103\DNVGLRPF103.py';
+        $execPath = 'python3';
+        $filePath = '/var/www/html/app/Http/python/DNVGLRPF103.py'
         $command = ($execPath . ' ' . $filePath . ' '. $argss);
         // $output = json_decode(shell_exec($command),true);
         $output = shell_exec($command);

@@ -878,37 +878,40 @@ def DNVGLRPF114(D, Wins, Whdt, Wopt, I, T0, vMethod, Depth, gamma, su, su_re, ph
 
 # print (sys.argv)
 
-D = float(sys.argv[1])
-Wins = float(sys.argv[2])
-Whdt = float(sys.argv[3])
-Wopt = float(sys.argv[4])
-I = float(sys.argv[5])
-T0 = float(sys.argv[6])
-vMethod = sys.argv[7]
-Depth = sys.argv[8]
-gamma = sys.argv[9]
-su = sys.argv[10]
-su_re = sys.argv[11]
-phi = sys.argv[12]
-deltaPeak = sys.argv[13]
-deltaRes = sys.argv[14]
-mShansep = sys.argv[15]
+D = 0.27305
+Wins = 844.22
+Whdt = 2780.96
+Wopt = 1222.12
+I = 8.822E-5
+T0 = 250000
+vMethod = 'Undrained.model.2'
+Depth = '0,1,2,3,4'
+gamma = '5000,5000,5000,5000,5000'
+su = '1000,2000,3000,4000,5000'
+su_re = '400,800,1200,1600,2000'
+phi = '30,31,32,33,34'
+deltaPeak = '25,26,27,28,29'
+deltaRes = '20,21,22,23,24'
+mShansep = '0.7,0.7,0.7,0.7,0.7'
 
-# D = 0.27305
-# Wins = 844.22
-# Whdt = 2780.96
-# Wopt = 1222.12
-# I = 8.822E-5
-# T0 = 250000
-# vMethod = 'Undrained.model.2'
-# Depth = '0,1,2,3,4'
-# gamma = '5000,5000,5000,5000,5000'
-# su = '1000,2000,3000,4000,5000'
-# su_re = '400,800,1200,1600,2000'
-# phi = '30,31,32,33,34'
-# deltaPeak = '25,26,27,28,29'
-# deltaRes = '20,21,22,23,24'
-# mShansep = '0.7,0.7,0.7,0.7,0.7'
+if len(sys.argv) > 1:
+    D = float(sys.argv[1])
+    Wins = float(sys.argv[2])
+    Whdt = float(sys.argv[3])
+    Wopt = float(sys.argv[4])
+    I = float(sys.argv[5])
+    T0 = float(sys.argv[6])
+    vMethod = sys.argv[7]
+    Depth = sys.argv[8]
+    gamma = sys.argv[9]
+    su = sys.argv[10]
+    su_re = sys.argv[11]
+    phi = sys.argv[12]
+    deltaPeak = sys.argv[13]
+    deltaRes = sys.argv[14]
+    mShansep = sys.argv[15]
+
+
 
 
 result = DNVGLRPF114(D, Wins, Whdt, Wopt, I, T0, vMethod, Depth, gamma, su, su_re, phi, deltaPeak, deltaRes, mShansep)

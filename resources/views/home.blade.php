@@ -30,31 +30,38 @@
                   <div class="panel-body">
 
                     <a href="{{ route('DNVGLSTF101WT.index')}}">Wall thickness analysis (DNVGL ST F101)</a>
-                    <label>Calculate the minimum required wall thickness in accodacne with DNVGL ST F101 for Zone 1 and Zone 2</label>
+                    <label>Calculate the minimum required wall thickness in accodacne with DNVGL ST F101, October 2017 Edition</label>
 
                     <br>
                     <br>
 
                     <a href="{{ route('DNVGLRPF109.index')}}">Absolute stability analysis (DNVGL RP F109)</a>
-                    <label>Calculate the absolute vertical and horizontal stability in accordance with DNVGL RP F109. The embedment is excluded.</label>
+                    <label>Calculate the absolute vertical and horizontal stability in accordance with DNVGL RP F109, May 2017 Edition</label>
 
                     <br>
                     <br>
 
                     <a href="{{ route('DNVGLRPF103.index')}}">Anode mass calculation (DNVGL RP F103)</a>
-                    <label>Calculate presents the dimension of anode (Length) in accordance with DNVGL RP F103</label>
+                    <label>Calculate presents the dimension of anode (Length) in accordance with DNVGL RP F103, July 2016 Edition</label>
 
+                    <!-- <br>
+                    <br>
+
+                    <a href="{{ route('DNVGLRPF105.index')}}">Free span analysis (DNVGL RP F105)</a>
+                    <label>Calculate the fatige life of the isolated span in accordance with DNVGL RP F109, June 2017 Edition </label> -->
+<!--
                     <br>
                     <br>
-
-                    <!-- <a href="#">Allowable freespan spanning screening calculation (DNVGL RP F105)</a>
-                    <label>Calculate allowable span (screening) in accordance with DNVGL RP F115 </label>
-
-                    <br>
-                    <br> -->
 
                     <a href="{{ route('f114.index')}}">Pipeline soil interaction analysis (DNVGL RP F114)</a>
+                    <label>Calculate the embedment, axial pipeline resistance and lateral pipeline resistance in accordance with DNVGL RP F114, May 2017 Edition </label> -->
+
+                    <br>
+                    <br>
+
+                    <a href="{{ route('DNVGLRPF114.index')}}">Pipeline soil interaction analysis (DNVGL RP F114)</a>
                     <label>Calculate the embedment, axial pipeline resistance and lateral pipeline resistance in accordance with DNVGL RP F114, May 2017 Edition </label>
+
                   </div>
 
                 </div>

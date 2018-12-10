@@ -33,7 +33,7 @@
           </div>
           <div class="panel-body">
             <figure class="panel-image">
-              <img src="{{URL::asset('/image/DNVGLSTF101WT.png')}}" alt="Input "></div>
+              <img src="{{URL::asset('/image/DNVGLSTF101WT.png')}}" alt="Input " class="img-responsive center-block"></div>
             </figure>
         </div>
       </div>
